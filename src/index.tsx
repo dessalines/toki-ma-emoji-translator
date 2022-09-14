@@ -7,6 +7,12 @@ const container = document.getElementById("app");
 class MyComponent extends Component<unknown, unknown> {
 	constructor(props: unknown, context: unknown) {
 		super(props, context);
+		if (
+			window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches
+		) {
+			document.body.classList.add("dark");
+		}
 	}
 
 	public render() {

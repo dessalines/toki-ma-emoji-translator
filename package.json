@@ -13,7 +13,7 @@
     "typescript"
   ],
   "author": "Dessalines",
-  "license": "GPLv3",
+  "license": "AGPL-3.0",
   "dependencies": {
     "autosize": "^5.0.1",
     "chota": "^0.8.0",
