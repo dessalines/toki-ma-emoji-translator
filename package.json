@@ -1,0 +1,68 @@
+{
+  "name": "toki-ma-emoji-translator",
+  "version": "1.0.0",
+  "description": "Converts toki ma text to emojis and back.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "lint": "tsc --noEmit && eslint --ext .js,.ts,.tsx src",
+    "start": "webpack-dev-server --mode=development"
+  },
+  "keywords": [
+    "inferno",
+    "typescript"
+  ],
+  "author": "Dessalines",
+  "license": "GPLv3",
+  "dependencies": {
+    "autosize": "^5.0.1",
+    "chota": "^0.8.0",
+    "eslint-plugin-inferno": "^7.31.8",
+    "inferno": "^8.0.2",
+    "papaparse": "^5.3.2"
+  },
+  "devDependencies": {
+    "@sniptt/monads": "^0.5.10",
+    "@types/autosize": "^4.0.1",
+    "@types/papaparse": "^5.3.5",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.20.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "import-sort-style-module": "^6.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "sass": "^1.54.0",
+    "sass-loader": "^13.0.2",
+    "sortpack": "^2.3.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.1",
+    "ts-plugin-inferno": "^1.0.0",
+    "typescript": "^4.7.4",
+    "webpack": "5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "4.9.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "package.json": [
+      "sortpack"
+    ]
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
+  }
+}
